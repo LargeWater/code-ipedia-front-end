@@ -6,15 +6,17 @@ import 'prismjs/components/prism-clike';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/themes/prism-tomorrow.css';
 
-const CodeEditor = (props) => {
+const CodeEditor = ({handleChange, value, name}) => {
   const [code, setCode] = useState(
     ``
   );
   return(
     <div>
     <Editor
-      value={code}
+      value={value}
       onValueChange={code => setCode(code)}
+      onChange={handleChange}
+      name={name}
       highlight={code => highlight(code, languages.js)}
       padding={10}
       textareaClassName="code-editor"

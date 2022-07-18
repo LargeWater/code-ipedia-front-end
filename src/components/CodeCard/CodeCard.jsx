@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 const CodeCard = (props) => {
-  console.log(props.post.author._id)
   return(
     <div className="card">
       <div className="card-header">

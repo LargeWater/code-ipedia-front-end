@@ -2,6 +2,7 @@ import styles from "./Index.module.css";
 import CodeCard from "../../components/CodeCard/CodeCard";
 
 const Index = (props) => {
+  console.log(props)
   return (
     <>
       <h1>Posts</h1>
@@ -13,7 +14,7 @@ const Index = (props) => {
             title={post.title}
             author={post.author.name}
             user={props.user}
-            code={props.code}
+            code={post.code}
           />
         )}
       </div>
